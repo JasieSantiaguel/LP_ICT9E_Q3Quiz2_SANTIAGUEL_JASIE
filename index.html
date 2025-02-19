@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JASIES TICKETING CENTER</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"; rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+     body {
+     	background-color: darkred;
+     }
+
+    
+</style>
+</head>
+<body>
+<br><br>
+<div class="container" style="background-color: #FF5B61">
+	<h1 style="color: white;">
+JASIE'S TICKETING CENTER</h1>
+
+	</div>
+
+
+<div class="container" style="background-color: #E23F44">
+<details ontoggle="message()">
+		<summary style="color:white;">
+PERSONAL INFORMATION </summary>
+		<i style="color:white;"> Kindly fill up the requirements below.
+ </i>
+
+ <form> 
+<center>
+	<h5 style="color:white;"> Full Name: </h5> 
+	
+			<input type="text" id="fname" placeholder="" style="border-color: white; border-radius: 5px;">
+
+<br> 
+
+	<h5 style="color: white;"> Personal Email: </h5>
+			<input type="text" id="email" placeholder=""style="border-color: white; border-radius: 5px;">  
+
+<br><br>
+
+<button type="button" class="btn btn-danger" onclick="check_answer()"> SUBMIT INFO </button> <br>
+
+</center>
+</details>
+</form>
+
+ <script> 
+    	function check_answer() {
+               
+                  
+                   window.alert ('Thank you for filling it up! We will make sure to keep this information secure.')
+
+    	}
+
+</script>
+</div>
+<br>
+<div class="container" style="background-color: #C6373C">
+<details ontoggle="message()">
+		<summary style="color:white;">
+Ticket Price </summary>
+		<i style="color:white;"> Kindly select one of the options from each box. 
+ </i>
+<center>
+ <form> <br>
+              <label style="color: white;">Choose your seat: </label>
+              <select class="form-select" id="nice"> 
+                  <option value="none"> Select </option>
+                  <option value="550">Stalls </option>
+                  <option  value="800">Dress Circle </option>
+                  <option  value="4000">VIP SEATS </option>
+                  <option  value="900">Restricted View </option>
+                  <option  value="600">Theatre Balcony </option>
+
+              </select>
+ <br>  
+
+            <label style="color: white;">Choose an option: </label>
+            <select class="form-select" id="discount"> 
+                      
+                   <option value="none"> Select </option>
+                  <option value="0.2">PWD/Senior Citizen/Student</option>
+                  <option  value="0">Regular </option>
+
+            </select>
+            <br>
+             <button type="button" class="btn btn-danger" onclick="check_price()"> Ticket Price </button>
+
+    	</form>
+ <script> 
+    	function check_price() {
+               var choice1=document.getElementById('nice').value;
+                 var disc1=document.getElementById('discount').value; 
+                 var final_rate= choice1 - (disc1*choice1);
+                  
+                   window.alert ('Your final ticket price is' + final_rate);
+                  
+    	}
+
+
+</script>
+
+
+
+</center></details></div> <br>
+
+
+<div class="container" style="background-color:#AA2F33">
+<center>
+<details ontoggle="message()">
+		<summary style="color:white;">
+PRINT TICKET:</summary>
+		<i style="color:white;"> 
+
+<img src="ticket.png">
+
+<br><br>
+ 
+ <button type="button" class="btn btn-danger" onclick="check_print()"> Print Ticket </button>
+
+<script> 
+      function check_print() {
+               
+                  
+                   window.alert ('Your ticket is printing.')
+
+      }
+
+</script>
+
+ <button type="button" class="btn btn-primary" onclick="check_shop()"> Print Ticket </button>
+
+<script> 
+      function check_shop() {
+               
+                  
+                   window.alert ('To check our shop, proceed to our website JasiesTicketTeers.')
+
+      }
+
+</script>
+
+
+</div>
+</details></i></details></center>
+ 
+
+</body>
+</html>
+
